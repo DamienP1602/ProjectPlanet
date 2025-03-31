@@ -40,6 +40,7 @@ public class PlanetManager : Singleton<PlanetManager>
                     continue;
                 }
             }
+            Debug.Log(_planet.Value.data.ToString());
         }
     }
 }
