@@ -36,7 +36,7 @@ public class TrackedImageSpawner : MonoBehaviour
         {
             _body = Instantiate(_prefab);
             //planetInfoText.text = "J'affiche la";
-            PlanetManager.Instance.ShowPlanetInfo(_body.transform);
+            //PlanetManager.Instance.ShowPlanetInfo(_body.GetComponentInChildren<PlanetComponent>());
         }
 
 

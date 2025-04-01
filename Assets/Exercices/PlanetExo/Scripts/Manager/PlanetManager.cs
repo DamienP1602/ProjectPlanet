@@ -39,30 +39,55 @@ public class PlanetManager : Singleton<PlanetManager>
         Interact();
     }
 
-    public void Add(string _name,PlanetComponent _planet)
+    //public void Add(string _name,PlanetComponent _planet)
+    //{
+    //    allPlanets[_name] = _planet;
+    //    SetData();
+    //    ShowPlanetInfo(_planet);
+    //}
+
+    //public void SetData()
+    //{
+    //    foreach (KeyValuePair <string,PlanetComponent> _planet in allPlanets)
+    //    {
+    //        foreach (PlanetData _planetData in data.results)
+    //        {
+    //            if (_planetData.PlanetName.Contains(_planet.Key))
+    //            {
+    //                string _temperatureTemp = _planet.Value.data.Temperature;
+    //                _planet.Value.data = _planetData;
+
+    //                _planet.Value.data.Temperature = _planetData.VerifValue(_planetData.Temperature, _temperatureTemp);
+    //                continue;
+    //            }
+    //        }
+    //        Debug.Log(_planet.Value.data.ToString());
+    //    }
+    //}
+
+    public void Add(string _name, PlanetComponent _planet)
     {
         allPlanets[_name] = _planet;
-        SetData();
-        ShowPlanetInfo(_planet);
+        SetData(_name, _planet);
+        //ShowPlanetInfo(_planet);
     }
 
-    public void SetData()
+    public void SetData(string _name, PlanetComponent _planet)
     {
-        foreach (KeyValuePair <string,PlanetComponent> _planet in allPlanets)
-        {
-            foreach (PlanetData _planetData in data.results)
-            {
-                if (_planetData.PlanetName.Contains(_planet.Key))
-                {
-                    string _temperatureTemp = _planet.Value.data.Temperature;
-                    _planet.Value.data = _planetData;
+        canva.SetToCanva(data.total_count.ToString(), data.results.Length.ToString());
 
-                    _planet.Value.data.Temperature = _planetData.VerifValue(_planetData.Temperature, _temperatureTemp);
-                    continue;
-                }
+        foreach (PlanetData _planetData in data.results)
+        {
+            if (_planetData.PlanetName.Contains(_name))
+            {
+                string _temperatureTemp = _planet.data.Temperature;
+                _planet.data = _planetData;
+
+                _planet.data.Temperature = _planetData.VerifValue(_planetData.Temperature, _temperatureTemp);
+                continue;
             }
-            Debug.Log(_planet.Value.data.ToString());
         }
+        Debug.Log(_planet.data.ToString());
     }
 
     void Interact()
