@@ -43,7 +43,7 @@ public class PlanetManager : Singleton<PlanetManager>
     {
         allPlanets[_name] = _planet;
         SetData();
-        ShowPlanetInfo(_planet.transform);
+        ShowPlanetInfo(_planet);
     }
 
     public void SetData()
@@ -78,7 +78,8 @@ public class PlanetManager : Singleton<PlanetManager>
 
                 if (Physics.Raycast(_ray, out _result, 100.0f, planetLayer))
                 {
-                    ShowPlanetInfo(_result.collider.transform);
+                    PlanetComponent _planetComponent = _result.collider.GetComponent<PlanetComponent>();
+                    ShowPlanetInfo(_planetComponent);
                 }
             }
         }
@@ -91,19 +92,18 @@ public class PlanetManager : Singleton<PlanetManager>
 
             if (Physics.Raycast(_ray, out _result, 100.0f, planetLayer))
             {
-                ShowPlanetInfo(_result.collider.transform);
+                PlanetComponent _planetComponent = _result.collider.GetComponent<PlanetComponent>();
+                ShowPlanetInfo(_planetComponent);
             }
         }
     }
 
-    public void ShowPlanetInfo(Transform _planet)
+    public void ShowPlanetInfo(PlanetComponent _planet)
     {
-        PlanetComponent _comp = allPlanets[_planet.parent.name];
-
-        cameraComp.SetTarget(_comp);
+        cameraComp.SetTarget(_planet);
         canva.gameObject.SetActive(true);
         
-        canva.SetToCanva(_comp.data.PlanetName,_comp.data.ToString());
+        canva.SetToCanva(_planet.data.PlanetName, _planet.data.ToString());
     }
 
     public PlanetData GetPlanetData(Transform _planet)
