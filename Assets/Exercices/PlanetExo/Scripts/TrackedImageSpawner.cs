@@ -35,6 +35,8 @@ public class TrackedImageSpawner : MonoBehaviour
         if (_prefab = allPlanets.Find(x => x.name == _name))
         {
             _body = Instantiate(_prefab);
+            planetNameText.text = _name;
+            planetInfoText.text = _body.GetComponentInChildren<PlanetComponent>().data.ToString();
             //planetInfoText.text = "J'affiche la";
             //PlanetManager.Instance.ShowPlanetInfo(_body.GetComponentInChildren<PlanetComponent>());
         }
