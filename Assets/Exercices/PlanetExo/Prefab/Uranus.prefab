@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6230436209598771083}
   - component: {fileID: 3994960819642584915}
   - component: {fileID: 7157531060919919237}
+  - component: {fileID: 6532735759401008260}
+  - component: {fileID: 2659431965883164526}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Untagged
@@ -29,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -107,3 +109,42 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6532735759401008260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5474748998320695485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  moveSpeed: 0.4
+  rotateSpeed: 1
+  isClockwise: 1
+  rotateOn: {fileID: 0}
+--- !u!114 &2659431965883164526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5474748998320695485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8675adc3eba20a0489a3657382023e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    <Type>k__BackingField: 
+    <PlanetName>k__BackingField: 
+    <Diameter>k__BackingField: 
+    <Densite>k__BackingField: 
+    <Revolution>k__BackingField: 
+    <Rotation>k__BackingField: 
+    <Temperature>k__BackingField: 
+    <SatellitesCount>k__BackingField: 
+  stelarBody: {fileID: 0}
