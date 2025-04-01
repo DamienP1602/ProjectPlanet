@@ -15,14 +15,17 @@ public class WebFetcher : MonoBehaviour
         {
             yield return _request.SendWebRequest();
 
+            AllData _data = new AllData();
+
             if (_request.result == UnityWebRequest.Result.ConnectionError || _request.result == UnityWebRequest.Result.ProtocolError)
             {
                 Debug.Log("Error with the request : " + _request.error);
+                _action(_data);
             }
             else
             {
                 string _json = _request.downloadHandler.text;
-                AllData _data = JsonConvert.DeserializeObject<AllData>(_json);
+                _data = JsonConvert.DeserializeObject<AllData>(_json);
                 _action(_data);
             }
         }

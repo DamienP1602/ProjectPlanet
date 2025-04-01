@@ -1,9 +1,10 @@
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
-
+using UnityEngine.Networking;
 using InputTouch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class PlanetManager : Singleton<PlanetManager>
@@ -30,11 +31,11 @@ public class PlanetManager : Singleton<PlanetManager>
     void Start()
     {
         //StartCoroutine(WebFetcher.Request(SetData));
-        StartCoroutine(WebFetcher.Request((_data) => data = _data));
+        //StartCoroutine(WebFetcher.Request(SetDebug));
 
         canva.quitButton.onClick.AddListener(ResetTarget);
 
-        Invoke(nameof(SPAWNSUN), 3.0f);
+        Invoke(nameof(SPAWNSUN), 1.0f);
     }
 
     void SPAWNSUN()
@@ -52,7 +53,7 @@ void Update()
     {
         _name = _name.Replace("(Clone)","");
         allPlanets[_name] = _planet;
-        SetData(_name,_planet);
+        //SetData(_name,_planet);
         ShowPlanetInfo(_planet);
     }
 
