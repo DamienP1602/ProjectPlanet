@@ -15,6 +15,7 @@ public class CameraComponent : MonoBehaviour
     {
         if (target)
         {
+            if (target.StelarBody.IsStopSimulation()) return;
             springArm.position = target.StelarBody.GetPositionOffset();
             springArm.eulerAngles = target.StelarBody.GetRotationOffset();
         }

@@ -13,11 +13,21 @@ public class StelarBody : MonoBehaviour
     [SerializeField] Transform rotateOn;
     [SerializeField] Vector3 positionOffset = Vector3.zero;
     [SerializeField] Vector3 rotationOffset = Vector3.zero;
+    Vector3 startPosition = Vector3.zero;
+
+    private void Awake()
+    {
+        startPosition = transform.position;
+    }
     void Update()
     {
         //Camera.main.transform.parent.position = positionOffset;
         //Camera.main.transform.parent.eulerAngles = rotationOffset;
-        if (stopSimulation) return;
+        if (stopSimulation)
+        {
+            transform.position = startPosition;
+            return;
+        }
         transform.Rotate(transform.up, Mathf.Cos(Time.deltaTime * rotateSpeed) * GetRotationDirection(), Space.World);
         if (rotateOn == null) return;
         transform.position = GetNewPosition();
@@ -49,5 +59,10 @@ public class StelarBody : MonoBehaviour
     public Vector3 GetRotationOffset()
     {
         return rotationOffset;
+    }
+
+    public bool IsStopSimulation()
+    {
+        return stopSimulation;
     }
 }
