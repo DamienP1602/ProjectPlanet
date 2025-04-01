@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6277327195267868101
 Transform:
   m_ObjectHideFlags: 0
@@ -52,8 +52,8 @@ MonoBehaviour:
   isClockwise: 1
   stopSimulation: 0
   rotateOn: {fileID: 0}
-  bodyCamera: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &386994524389668812
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,5 +310,5 @@ MonoBehaviour:
   isClockwise: 1
   stopSimulation: 0
   rotateOn: {fileID: 1097789264188462251}
-  bodyCamera: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}

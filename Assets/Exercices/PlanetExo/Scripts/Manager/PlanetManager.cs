@@ -43,6 +43,7 @@ public class PlanetManager : Singleton<PlanetManager>
     {
         allPlanets[_name] = _planet;
         SetData();
+        ShowPlanetInfo(_planet.transform);
     }
 
     public void SetData()
@@ -95,13 +96,21 @@ public class PlanetManager : Singleton<PlanetManager>
         }
     }
 
-    void ShowPlanetInfo(Transform _planet)
+    public void ShowPlanetInfo(Transform _planet)
     {
         PlanetComponent _comp = allPlanets[_planet.parent.name];
 
         cameraComp.SetTarget(_comp);
         canva.gameObject.SetActive(true);
+        
         canva.SetToCanva(_comp.data.PlanetName,_comp.data.ToString());
+    }
+
+    public PlanetData GetPlanetData(Transform _planet)
+    {
+        PlanetComponent _comp = allPlanets[_planet.parent.name];
+        PlanetData _data = _comp.data;
+        return _data;
     }
 
     void ResetTarget()

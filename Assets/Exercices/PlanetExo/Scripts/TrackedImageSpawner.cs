@@ -7,7 +7,8 @@ using UnityEngine.XR.ARFoundation;
 public class TrackedImageSpawner : MonoBehaviour
 {
     [SerializeField] ARTrackedImageManager trackedManager;
-    [SerializeField] TMP_Text text;
+    [SerializeField] TMP_Text planetNameText;
+    [SerializeField] TMP_Text planetInfoText;
     [SerializeField] List<GameObject> allPlanets;
 
     void Start()
@@ -22,7 +23,7 @@ public class TrackedImageSpawner : MonoBehaviour
         {
             //print(_image.name);
             //Debug.Log(_image.name);
-            text.text = _image.referenceImage.name;
+            //planetNameText.text = _image.referenceImage.name;
             DisplayInfoText(_image.referenceImage.name);
         }
     }
@@ -30,10 +31,17 @@ public class TrackedImageSpawner : MonoBehaviour
     void DisplayInfoText(string _name)
     {
         GameObject _prefab;
-        GameObject _body;
+        GameObject _body = null;
         if (_prefab = allPlanets.Find(x => x.name == _name))
+        {
             _body = Instantiate(_prefab);
+            //planetInfoText.text = "J'affiche la";
+            PlanetManager.Instance.ShowPlanetInfo(_body.transform);
+        }
 
-        PlanetManager.Instance.
+
+
+        //PlanetData _data = PlanetManager.Instance.GetPlanetData(_body.transform);
+        //planetInfoText.text = _data.ToString();
     }
 }

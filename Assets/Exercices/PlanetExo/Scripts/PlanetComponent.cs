@@ -37,8 +37,8 @@ public class PlanetComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlanetManager.Instance.Add(transform.parent.name,this);
-        stelarBody = transform.parent.GetComponent<StelarBody>();
+        PlanetManager.Instance.Add(transform.parent.name, this);
+        stelarBody = gameObject.GetComponentInParent<StelarBody>();
     }
 
     // Update is called once per frame
