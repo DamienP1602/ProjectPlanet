@@ -10,8 +10,8 @@ public class PlanetManager : Singleton<PlanetManager>
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(WebFetcher.Request(SetData));
-
+        //StartCoroutine(WebFetcher.Request(SetData));
+        StartCoroutine(WebFetcher.Request((_data) => data = _data));
     }
 
     // Update is called once per frame
@@ -23,11 +23,11 @@ public class PlanetManager : Singleton<PlanetManager>
     public void Add(string _name,PlanetComponent _planet)
     {
         allPlanets[_name] = _planet;
+        //SetData();
     }
 
-    public void SetData(AllData _data)
+    public void SetData()
     {
-        data = _data;
         int _size = allPlanets.Count;
 
         foreach (KeyValuePair <string,PlanetComponent> _planet in allPlanets)
