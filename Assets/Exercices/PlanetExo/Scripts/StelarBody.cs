@@ -37,6 +37,6 @@ public class StelarBody : MonoBehaviour
     }
     private Vector3 GetNewPosition()
     {
-        return new Vector3(Mathf.Cos(Time.time * moveSpeed), 0, Mathf.Sin(Time.time * moveSpeed)) * range + rotateOn.position;
+        return new Vector3(Mathf.Cos(Time.time * moveSpeed), 0, Mathf.Sin(Time.time * moveSpeed)) * range + (rotateOn ? rotateOn.position : new Vector3(0.0f, 0.0f, 0.0f));
     }
 }
