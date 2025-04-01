@@ -1,9 +1,10 @@
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
-
+using UnityEngine.Networking;
 using InputTouch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class PlanetManager : Singleton<PlanetManager>
@@ -30,12 +31,11 @@ public class PlanetManager : Singleton<PlanetManager>
     void Start()
     {
         //StartCoroutine(WebFetcher.Request(SetData));
-        StartCoroutine(WebFetcher.Request((_data) => data = _data));
         //StartCoroutine(WebFetcher.Request(SetDebug));
 
         canva.quitButton.onClick.AddListener(ResetTarget);
 
-        //Invoke(nameof(SPAWNSUN), 3.0f);
+        Invoke(nameof(SPAWNSUN), 1.0f);
     }
 
     void SPAWNSUN()
@@ -43,24 +43,18 @@ public class PlanetManager : Singleton<PlanetManager>
         Instantiate(sunTemp);
     }
 
-    void SetDebug(AllData _data)
-    {
-        data = _data;
-        //canva.SetToCanva(_data.total_count.ToString(), _data.results.Length.ToString());
-    }
-
-    // Update is called once per frame
-    void Update()
+// Update is called once per frame
+void Update()
     {
         Interact();
     }
 
     public void Add(string _name,PlanetComponent _planet)
     {
-        _name = _name.Replace("(Clone)", "");
+        _name = _name.Replace("(Clone)","");
         allPlanets[_name] = _planet;
-        SetData(_name,_planet);
-        //ShowPlanetInfo(_planet);
+        //SetData(_name,_planet);
+        ShowPlanetInfo(_planet);
     }
 
     public void SetData(string _name, PlanetComponent _planet)
@@ -123,8 +117,6 @@ public class PlanetManager : Singleton<PlanetManager>
     {
         canva.gameObject.SetActive(false);
         cameraComp.SetTarget(null);
-        cameraComp.gameObject.transform.position = new Vector3(0.0f, 20.0f, 0.0f);
-        cameraComp.gameObject.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
     }
 }
 
