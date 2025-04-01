@@ -17,8 +17,14 @@ public class PlanetData
 
     public override string ToString()
     {
-        return "Type = " + Type+ "\n" + "PlanetName = " + PlanetName + "\n" + "Diameter = " + Diameter + "\n" + "Densite = " + Densite + "\n" +
-            "Revolution = " + Revolution + "\n" + "Rotation = " + Rotation + "\n" + "Temperature" + Temperature + "\n" + "SatellitesCount = " + SatellitesCount;
+        return "Type = " + VerifValue(Type) + "\n" + "Diameter = " + VerifValue(Diameter) + "\n" + "Densite = " + VerifValue(Densite) + "\n" +
+            "Revolution = " + VerifValue(Revolution) + "\n" + "Rotation = " + VerifValue(Rotation) + "\n" + 
+            "Temperature = " + VerifValue(Temperature) + "\n" + "SatellitesCount = " + VerifValue(SatellitesCount);
+    }
+
+    public string VerifValue(string _str, string _toReplace = "0")
+    {
+        return string.IsNullOrEmpty(_str) ? _toReplace : _str;
     }
 }
 
@@ -30,7 +36,7 @@ public class PlanetComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlanetManager.Instance.Add(name,this);
+        PlanetManager.Instance.Add(transform.parent.name,this);
         stelarBody = GetComponent<StelarBody>();
     }
 
