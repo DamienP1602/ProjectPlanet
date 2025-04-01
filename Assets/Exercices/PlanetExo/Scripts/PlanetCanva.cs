@@ -12,7 +12,9 @@ public class PlanetCanva : MonoBehaviour
 
     public void SetToCanva(string _planetName, string _info)
     {
+        //title.text = "AAAAAAA";
         title.text = _planetName;
+        //info.text = "BBBBBBB";
         info.text = _info;
     }
 }

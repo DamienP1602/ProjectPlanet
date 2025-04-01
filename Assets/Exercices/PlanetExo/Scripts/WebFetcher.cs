@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using Newtonsoft.Json;
+using Unity.VisualScripting;
 
 public class WebFetcher : MonoBehaviour
 {
@@ -15,16 +16,36 @@ public class WebFetcher : MonoBehaviour
         {
             yield return _request.SendWebRequest();
 
+            AllData _data = new AllData();
+
             if (_request.result == UnityWebRequest.Result.ConnectionError || _request.result == UnityWebRequest.Result.ProtocolError)
             {
                 Debug.Log("Error with the request : " + _request.error);
+                _action(_data);
             }
             else
             {
                 string _json = _request.downloadHandler.text;
-                AllData _data = JsonConvert.DeserializeObject<AllData>(_json);
+                _data = JsonConvert.DeserializeObject<AllData>(_json);
                 _action(_data);
             }
         }
+        /*//    using (UnityWebRequest _request = UnityWebRequest.Get(WEB_URL))
+        //    {
+        //        yield return _request.SendWebRequest();
+        //        if (_request.result == UnityWebRequest.Result.ConnectionError || _request.result == UnityWebRequest.Result.ProtocolError)
+        //        {
+        //            Debug.Log("Error with the request : " + _request.error);
+        //        }
+        //        else
+        //        {
+        //            string _json = _request.downloadHandler.text;
+        //            AllData _data = JsonConvert.DeserializeObject<AllData>(_json);
+        //            _action(_data);
+        //        }
+        //    }*/
     }
+
+
+
 }

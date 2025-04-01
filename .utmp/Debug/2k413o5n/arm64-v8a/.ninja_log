@@ -1,9 +1,0 @@
-# ninja log v5
-10	338	7651131179793604	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	12d65e4e7d9c30ac
-8	340	7651131179783628	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	53c0d41cf9f0bdc9
-0	340	7651131179783628	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	562489f88d6108c9
-12	353	7651131179961694	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	1c33a792b4615a24
-4	368	7651131180121737	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	22359ce12b97d106
-6	405	7651131180472344	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	5f69736b3c641c0a
-2	408	7651131180497424	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	10bee8edfefd637b
-408	479	7651131180987330	E:/Unity/Project/CoursAR_SolarSystem/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/2k413o5n/obj/arm64-v8a/libgame.so	371d1bf10703fdd1

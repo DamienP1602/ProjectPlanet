@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5261721763452598483}
   - component: {fileID: 4271746535504682924}
   - component: {fileID: 6053195765252394537}
+  - component: {fileID: 2592594548097526901}
   m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
@@ -121,15 +122,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    <Type>k__BackingField: 
-    <PlanetName>k__BackingField: 
-    <Diameter>k__BackingField: 
-    <Densite>k__BackingField: 
-    <Revolution>k__BackingField: 
-    <Rotation>k__BackingField: 
-    <Temperature>k__BackingField: 
-    <SatellitesCount>k__BackingField: 
+    <Type>k__BackingField: "Plan\xE8te Gazeuse"
+    <PlanetName>k__BackingField: Jupiter
+    <Diameter>k__BackingField: 142984
+    <Densite>k__BackingField: 1326
+    <Revolution>k__BackingField: 4331
+    <Rotation>k__BackingField: 9.9
+    <Temperature>k__BackingField: -110
+    <SatellitesCount>k__BackingField: 79
   stelarBody: {fileID: 0}
+--- !u!114 &2592594548097526901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741997964675409618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  moveSpeed: 0.4
+  rotateSpeed: 1
+  isClockwise: 1
+  stopSimulation: 0
+  rotateOn: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &7484344847881990428
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,14 +160,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8315227967673868345}
-  - component: {fileID: 1546982578631620357}
   m_Layer: 3
   m_Name: Uranus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8315227967673868345
 Transform:
   m_ObjectHideFlags: 0
@@ -163,23 +183,3 @@ Transform:
   - {fileID: 9198125799946399883}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1546982578631620357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7484344847881990428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 10
-  moveSpeed: 0.4
-  rotateSpeed: 1
-  isClockwise: 1
-  stopSimulation: 0
-  rotateOn: {fileID: 0}
-  bodyCamera: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}

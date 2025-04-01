@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Exercices/TrackingImage/Scenes/S_TrackingImage.unity
     guid: 1847055ccbcc4094ca4e4d8b06e349f2
+  - enabled: 1
+    path: Assets/Exercices/PlanetExo/Scene/S_Map.unity
+    guid: 8ca58668231ac8141b88e48c4245f513
+  - enabled: 0
+    path: Assets/Exercices/PlanetExo/Scene/S_Map_Test.unity
+    guid: 08cc1775af9784f4e9372a2a9e09fe38
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

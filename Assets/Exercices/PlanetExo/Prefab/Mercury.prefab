@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 373735760533444536}
   - component: {fileID: 2780094602005872636}
   - component: {fileID: 7019766370798332624}
+  - component: {fileID: 2941408910677592317}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -121,15 +122,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    <Type>k__BackingField: 
-    <PlanetName>k__BackingField: 
-    <Diameter>k__BackingField: 
-    <Densite>k__BackingField: 
-    <Revolution>k__BackingField: 
-    <Rotation>k__BackingField: 
-    <Temperature>k__BackingField: 
-    <SatellitesCount>k__BackingField: 
+    <Type>k__BackingField: "Plan\xE8te tellurique"
+    <PlanetName>k__BackingField: Mercure
+    <Diameter>k__BackingField: 4879
+    <Densite>k__BackingField: 5427
+    <Revolution>k__BackingField: 88.0
+    <Rotation>k__BackingField: 1407.6 (58 jours/days)
+    <Temperature>k__BackingField: 167
+    <SatellitesCount>k__BackingField: 0
   stelarBody: {fileID: 0}
+--- !u!114 &2941408910677592317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3840187183298332522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 2
+  moveSpeed: 1
+  rotateSpeed: 1
+  isClockwise: 1
+  stopSimulation: 0
+  rotateOn: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &6431621096093463998
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +160,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6072930449793841198}
-  - component: {fileID: 3000049496885535568}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Untagged
@@ -163,23 +183,3 @@ Transform:
   - {fileID: 1734115297444403677}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3000049496885535568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6431621096093463998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 2
-  moveSpeed: 1
-  rotateSpeed: 1
-  isClockwise: 1
-  stopSimulation: 0
-  rotateOn: {fileID: 0}
-  bodyCamera: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}

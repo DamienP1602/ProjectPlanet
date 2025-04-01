@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6913895823828695869}
   - component: {fileID: 3687017124995447166}
   - component: {fileID: 9153577008143578652}
+  - component: {fileID: 2945394042707010510}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -121,15 +122,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    <Type>k__BackingField: 
-    <PlanetName>k__BackingField: 
-    <Diameter>k__BackingField: 
-    <Densite>k__BackingField: 
-    <Revolution>k__BackingField: 
-    <Rotation>k__BackingField: 
-    <Temperature>k__BackingField: 
-    <SatellitesCount>k__BackingField: 
+    <Type>k__BackingField: "\xC9toile"
+    <PlanetName>k__BackingField: Soleil
+    <Diameter>k__BackingField: 1392684
+    <Densite>k__BackingField: 1408
+    <Revolution>k__BackingField: 0
+    <Rotation>k__BackingField: 654.72 (27,28 jours/days)
+    <Temperature>k__BackingField: 5 500
+    <SatellitesCount>k__BackingField: 0
   stelarBody: {fileID: 0}
+--- !u!114 &2945394042707010510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956795710731193114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
+  moveSpeed: 0
+  rotateSpeed: 1
+  isClockwise: 1
+  stopSimulation: 0
+  rotateOn: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &8062313230549136273
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +160,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7447427087826878376}
-  - component: {fileID: 8969295982396723271}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -158,28 +178,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7482330180092577610}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8969295982396723271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8062313230549136273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 0
-  moveSpeed: 0
-  rotateSpeed: 1
-  isClockwise: 1
-  stopSimulation: 0
-  rotateOn: {fileID: 0}
-  bodyCamera: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
