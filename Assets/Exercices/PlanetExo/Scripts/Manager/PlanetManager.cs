@@ -17,6 +17,8 @@ public class PlanetManager : Singleton<PlanetManager>
 
     [SerializeField] GameObject sunTemp = null;
 
+    public Dictionary<string, PlanetComponent> AllPlanets => allPlanets;
+
     private void OnEnable()
     {
         EnhancedTouchSupport.Enable();

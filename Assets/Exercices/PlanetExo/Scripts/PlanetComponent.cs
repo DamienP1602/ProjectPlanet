@@ -39,6 +39,8 @@ public class PlanetComponent : MonoBehaviour
     {
         PlanetManager.Instance.Add(transform.parent.name,this);
         stelarBody = GetComponent<StelarBody>();
+
+        transform.parent.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

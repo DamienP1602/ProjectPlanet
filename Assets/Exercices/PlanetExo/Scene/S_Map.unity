@@ -2205,6 +2205,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a083130019f8504cb6a82c131a2bb99, type: 3}
+--- !u!1 &1305054279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4225446655484788031, guid: 0a083130019f8504cb6a82c131a2bb99,
+    type: 3}
+  m_PrefabInstance: {fileID: 1305054278}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1375914975
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,16 +2351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68163a1eceed1924f8cfd3e7faf7bd33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackedManager: {fileID: 0}
+  trackedManager: {fileID: 1606787746}
   planetNameText: {fileID: 1141486443}
   planetInfoText: {fileID: 1041965293}
-  allPlanets:
-  - {fileID: 227815691200671138, guid: b029523ca86b0b74686a5e3c653efbff, type: 3}
-  - {fileID: 2752133378387759989, guid: 1e63edea1e7e6b84b9b1f2caba717126, type: 3}
-  - {fileID: 5775531404100502217, guid: a6c77342a961a5a47aa23264533bf5f3, type: 3}
-  - {fileID: 6431621096093463998, guid: 76137e408fa881e47842e9d7c911ceb8, type: 3}
-  - {fileID: 8062313230549136273, guid: f33ab9cdd4847194c9947228d63ab65f, type: 3}
-  - {fileID: 5060885326598892270, guid: 1cc6cc2b99f6c6a4889d2ce1247d1b63, type: 3}
+  solarSystem: {fileID: 1305054279}
 --- !u!1 &1775455671
 GameObject:
   m_ObjectHideFlags: 0
