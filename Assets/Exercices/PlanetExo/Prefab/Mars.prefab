@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6459480365541901888}
   - component: {fileID: 3843575420809166668}
   - component: {fileID: 1621624459768552857}
+  - component: {fileID: 2287306888483180016}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -130,6 +131,26 @@ MonoBehaviour:
     <Temperature>k__BackingField: 
     <SatellitesCount>k__BackingField: 
   stelarBody: {fileID: 0}
+--- !u!114 &2287306888483180016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2593321413114829545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 6
+  moveSpeed: 0.7
+  rotateSpeed: 1
+  isClockwise: 1
+  stopSimulation: 0
+  rotateOn: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &5775531404100502217
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +160,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 371197471751437556}
-  - component: {fileID: 6047157331453059884}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Untagged
@@ -163,23 +183,3 @@ Transform:
   - {fileID: 7105384136962872897}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6047157331453059884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5775531404100502217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 6
-  moveSpeed: 0.7
-  rotateSpeed: 1
-  isClockwise: 1
-  stopSimulation: 0
-  rotateOn: {fileID: 0}
-  bodyCamera: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}

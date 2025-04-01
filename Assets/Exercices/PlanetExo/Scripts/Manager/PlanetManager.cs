@@ -14,6 +14,8 @@ public class PlanetManager : Singleton<PlanetManager>
     [SerializeField] PlanetCanva canva = null;
     [SerializeField] CameraComponent cameraComp = null;
 
+    [SerializeField] GameObject sunTemp = null;
+
     private void OnEnable()
     {
         EnhancedTouchSupport.Enable();
@@ -31,38 +33,43 @@ public class PlanetManager : Singleton<PlanetManager>
         StartCoroutine(WebFetcher.Request((_data) => data = _data));
 
         canva.quitButton.onClick.AddListener(ResetTarget);
+
+        Invoke(nameof(SPAWNSUN), 3.0f);
     }
 
-    // Update is called once per frame
-    void Update()
+    void SPAWNSUN()
+    {
+        Instantiate(sunTemp);
+    }
+
+// Update is called once per frame
+void Update()
     {
         Interact();
     }
 
     public void Add(string _name,PlanetComponent _planet)
     {
+        _name = _name.Replace("(Clone)","");
         allPlanets[_name] = _planet;
-        SetData();
+        SetData(_name,_planet);
         ShowPlanetInfo(_planet);
     }
 
-    public void SetData()
+    public void SetData(string _name, PlanetComponent _planet)
     {
-        foreach (KeyValuePair <string,PlanetComponent> _planet in allPlanets)
+        foreach (PlanetData _planetData in data.results)
         {
-            foreach (PlanetData _planetData in data.results)
+            if (_planetData.PlanetName.Contains(_name))
             {
-                if (_planetData.PlanetName.Contains(_planet.Key))
-                {
-                    string _temperatureTemp = _planet.Value.data.Temperature;
-                    _planet.Value.data = _planetData;
+                string _temperatureTemp = _planet.data.Temperature;
+                _planet.data = _planetData;
 
-                    _planet.Value.data.Temperature = _planetData.VerifValue(_planetData.Temperature, _temperatureTemp);
-                    continue;
-                }
+                _planet.data.Temperature = _planetData.VerifValue(_planetData.Temperature, _temperatureTemp);
+                continue;
             }
-            Debug.Log(_planet.Value.data.ToString());
         }
+        Debug.Log(_planet.data.ToString());
     }
 
     void Interact()

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3509283587234978500}
-  - component: {fileID: 990572138062866389}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -33,26 +32,6 @@ Transform:
   - {fileID: 1201824769156820073}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &990572138062866389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5060885326598892270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 3
-  moveSpeed: 0.9
-  rotateSpeed: 1
-  isClockwise: 1
-  stopSimulation: 0
-  rotateOn: {fileID: 0}
-  bodyCamera: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &8655406417334961456
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,6 +45,7 @@ GameObject:
   - component: {fileID: 6407890974424904052}
   - component: {fileID: 8860813748629955271}
   - component: {fileID: 2765711615718030430}
+  - component: {fileID: 3978929505001647241}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -183,3 +163,23 @@ MonoBehaviour:
     <Temperature>k__BackingField: 
     <SatellitesCount>k__BackingField: 
   stelarBody: {fileID: 0}
+--- !u!114 &3978929505001647241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8655406417334961456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 3
+  moveSpeed: 0.9
+  rotateSpeed: 1
+  isClockwise: 1
+  stopSimulation: 0
+  rotateOn: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
