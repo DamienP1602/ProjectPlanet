@@ -11,6 +11,11 @@ public class CameraComponent : MonoBehaviour
 
     public void SetTarget(PlanetComponent _target) => target = _target;
 
+    private void Awake()
+    {
+        transform.position = new Vector3(0.0f, 20.0f, 0.0f);
+        transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
+    }
     private void Update()
     {
         if (target)
