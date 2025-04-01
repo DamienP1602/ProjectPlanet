@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6277327195267868101}
-  - component: {fileID: 80333199849878366}
   m_Layer: 3
   m_Name: Earth
   m_TagString: Untagged
@@ -34,26 +33,6 @@ Transform:
   - {fileID: 3882696960448330776}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &80333199849878366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227815691200671138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 4
-  moveSpeed: 0.8
-  rotateSpeed: 1
-  isClockwise: 1
-  stopSimulation: 0
-  rotateOn: {fileID: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
-  rotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &386994524389668812
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,6 +46,7 @@ GameObject:
   - component: {fileID: 8188776776249206276}
   - component: {fileID: 4076322841639673810}
   - component: {fileID: 7598033328724648253}
+  - component: {fileID: 8365121747397039362}
   m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
@@ -184,6 +164,26 @@ MonoBehaviour:
     <Temperature>k__BackingField: 
     <SatellitesCount>k__BackingField: 
   stelarBody: {fileID: 0}
+--- !u!114 &8365121747397039362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386994524389668812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596baebeb6e3cf44f96f9685be47cff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 4
+  moveSpeed: 0.8
+  rotateSpeed: 1
+  isClockwise: 1
+  stopSimulation: 0
+  rotateOn: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &5221120284000496800
 GameObject:
   m_ObjectHideFlags: 0
