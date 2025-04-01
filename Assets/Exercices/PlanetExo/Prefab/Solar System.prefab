@@ -53,6 +53,21 @@ PrefabInstance:
       propertyPath: rotateOn
       value: 
       objectReference: {fileID: 6151244951121432504}
+    - target: {fileID: 895098232601676073, guid: 100facb576133df4cb480b07d554dba0,
+        type: 3}
+      propertyPath: positionOffset.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 895098232601676073, guid: 100facb576133df4cb480b07d554dba0,
+        type: 3}
+      propertyPath: positionOffset.z
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 895098232601676073, guid: 100facb576133df4cb480b07d554dba0,
+        type: 3}
+      propertyPath: rotationOffset.x
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5882973619207792418, guid: 100facb576133df4cb480b07d554dba0,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -223,6 +238,11 @@ PrefabInstance:
       propertyPath: rotateOn
       value: 
       objectReference: {fileID: 6151244951121432504}
+    - target: {fileID: 1546982578631620357, guid: 191a55f6d80cea049ac688d963e883db,
+        type: 3}
+      propertyPath: positionOffset.z
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5474748998320695485, guid: 191a55f6d80cea049ac688d963e883db,
         type: 3}
       propertyPath: m_Name
@@ -253,6 +273,26 @@ PrefabInstance:
       propertyPath: rotateOn
       value: 
       objectReference: {fileID: 6151244951121432504}
+    - target: {fileID: 3000049496885535568, guid: 76137e408fa881e47842e9d7c911ceb8,
+        type: 3}
+      propertyPath: positionOffset.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840187183298332522, guid: 76137e408fa881e47842e9d7c911ceb8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431621096093463998, guid: 76137e408fa881e47842e9d7c911ceb8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431621096093463998, guid: 76137e408fa881e47842e9d7c911ceb8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7102126685259481412, guid: 76137e408fa881e47842e9d7c911ceb8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -353,10 +393,30 @@ PrefabInstance:
       propertyPath: rotateOn
       value: 
       objectReference: {fileID: 6151244951121432504}
+    - target: {fileID: 990572138062866389, guid: 1cc6cc2b99f6c6a4889d2ce1247d1b63,
+        type: 3}
+      propertyPath: positionOffset.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060885326598892270, guid: 1cc6cc2b99f6c6a4889d2ce1247d1b63,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060885326598892270, guid: 1cc6cc2b99f6c6a4889d2ce1247d1b63,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7639554506430792996, guid: 1cc6cc2b99f6c6a4889d2ce1247d1b63,
         type: 3}
       propertyPath: m_Name
       value: Venus
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655406417334961456, guid: 1cc6cc2b99f6c6a4889d2ce1247d1b63,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8775979584921994761, guid: 1cc6cc2b99f6c6a4889d2ce1247d1b63,
         type: 3}
@@ -453,6 +513,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sun
       objectReference: {fileID: 0}
+    - target: {fileID: 1956795710731193114, guid: f33ab9cdd4847194c9947228d63ab65f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6703878415911029211, guid: f33ab9cdd4847194c9947228d63ab65f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -517,6 +582,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062313230549136273, guid: f33ab9cdd4847194c9947228d63ab65f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062313230549136273, guid: f33ab9cdd4847194c9947228d63ab65f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969295982396723271, guid: f33ab9cdd4847194c9947228d63ab65f,
+        type: 3}
+      propertyPath: positionOffset.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969295982396723271, guid: f33ab9cdd4847194c9947228d63ab65f,
+        type: 3}
+      propertyPath: positionOffset.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969295982396723271, guid: f33ab9cdd4847194c9947228d63ab65f,
+        type: 3}
+      propertyPath: rotationOffset.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153577008143578652, guid: f33ab9cdd4847194c9947228d63ab65f,
+        type: 3}
+      propertyPath: data.<Temperature>k__BackingField
+      value: 5 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -608,16 +703,36 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2593321413114829545, guid: a6c77342a961a5a47aa23264533bf5f3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5101239150501007540, guid: a6c77342a961a5a47aa23264533bf5f3,
         type: 3}
       propertyPath: m_Name
       value: Mars
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775531404100502217, guid: a6c77342a961a5a47aa23264533bf5f3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775531404100502217, guid: a6c77342a961a5a47aa23264533bf5f3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6047157331453059884, guid: a6c77342a961a5a47aa23264533bf5f3,
         type: 3}
       propertyPath: rotateOn
       value: 
       objectReference: {fileID: 6151244951121432504}
+    - target: {fileID: 6047157331453059884, guid: a6c77342a961a5a47aa23264533bf5f3,
+        type: 3}
+      propertyPath: positionOffset.z
+      value: 5.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7145945642584641814, guid: a6c77342a961a5a47aa23264533bf5f3, type: 3}
@@ -643,6 +758,11 @@ PrefabInstance:
       propertyPath: rotateOn
       value: 
       objectReference: {fileID: 6151244951121432504}
+    - target: {fileID: 80333199849878366, guid: b029523ca86b0b74686a5e3c653efbff,
+        type: 3}
+      propertyPath: positionOffset.z
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 156796950695096381, guid: b029523ca86b0b74686a5e3c653efbff,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -717,6 +837,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882696960448330776, guid: b029523ca86b0b74686a5e3c653efbff,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -813,6 +938,21 @@ PrefabInstance:
       propertyPath: rotateOn
       value: 
       objectReference: {fileID: 6151244951121432504}
+    - target: {fileID: 6674844138130847476, guid: 1e63edea1e7e6b84b9b1f2caba717126,
+        type: 3}
+      propertyPath: positionOffset.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674844138130847476, guid: 1e63edea1e7e6b84b9b1f2caba717126,
+        type: 3}
+      propertyPath: positionOffset.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674844138130847476, guid: 1e63edea1e7e6b84b9b1f2caba717126,
+        type: 3}
+      propertyPath: rotationOffset.x
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 8746414364948010873, guid: 1e63edea1e7e6b84b9b1f2caba717126,
         type: 3}
       propertyPath: m_Name
@@ -898,6 +1038,11 @@ PrefabInstance:
       propertyPath: rotateOn
       value: 
       objectReference: {fileID: 6151244951121432504}
+    - target: {fileID: 8916703681185291917, guid: a595a3bb1ed7b1f42a131c7e1a2da05f,
+        type: 3}
+      propertyPath: positionOffset.z
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4583310158354656970, guid: a595a3bb1ed7b1f42a131c7e1a2da05f, type: 3}

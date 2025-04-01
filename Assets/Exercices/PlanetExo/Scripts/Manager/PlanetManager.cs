@@ -10,8 +10,9 @@ public class PlanetManager : Singleton<PlanetManager>
 {
     AllData data = new AllData();
     Dictionary<string,PlanetComponent> allPlanets = new();
-    [SerializeField] LayerMask planetLayer;
-    [SerializeField] PlanetCanva canva;
+    [SerializeField] LayerMask planetLayer = 0;
+    [SerializeField] PlanetCanva canva = null;
+    [SerializeField] CameraComponent cameraComp = null;
 
     private void OnEnable()
     {
@@ -29,8 +30,7 @@ public class PlanetManager : Singleton<PlanetManager>
         //StartCoroutine(WebFetcher.Request(SetData));
         StartCoroutine(WebFetcher.Request((_data) => data = _data));
 
-        // TODO
-        // canva.quitButton.onClick.AddListener();
+        canva.quitButton.onClick.AddListener(ResetTarget);
     }
 
     // Update is called once per frame
@@ -99,7 +99,15 @@ public class PlanetManager : Singleton<PlanetManager>
     {
         PlanetComponent _comp = allPlanets[_planet.parent.name];
 
+        cameraComp.SetTarget(_comp);
+        canva.gameObject.SetActive(true);
         canva.SetToCanva(_comp.data.PlanetName,_comp.data.ToString());
+    }
+
+    void ResetTarget()
+    {
+        canva.gameObject.SetActive(false);
+        cameraComp.SetTarget(null);
     }
 }
 

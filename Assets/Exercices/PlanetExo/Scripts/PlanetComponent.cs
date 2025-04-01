@@ -19,7 +19,7 @@ public class PlanetData
     {
         return "Type = " + VerifValue(Type) + "\n" + "Diameter = " + VerifValue(Diameter) + "\n" + "Densite = " + VerifValue(Densite) + "\n" +
             "Revolution = " + VerifValue(Revolution) + "\n" + "Rotation = " + VerifValue(Rotation) + "\n" + 
-            "Temperature = " + VerifValue(Temperature) + "\n" + "SatellitesCount = " + VerifValue(SatellitesCount);
+            "Average Temperature = " + VerifValue(Temperature) + "\n" + "Amount of Satellites = " + VerifValue(SatellitesCount);
     }
 
     public string VerifValue(string _str, string _toReplace = "0")
@@ -32,12 +32,13 @@ public class PlanetComponent : MonoBehaviour
 {
     public PlanetData? data = null;
     [SerializeField] StelarBody stelarBody = null;
+    public StelarBody StelarBody => stelarBody;
 
     // Start is called before the first frame update
     void Start()
     {
         PlanetManager.Instance.Add(transform.parent.name,this);
-        stelarBody = GetComponent<StelarBody>();
+        stelarBody = transform.parent.GetComponent<StelarBody>();
     }
 
     // Update is called once per frame
