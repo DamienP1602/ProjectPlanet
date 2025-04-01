@@ -123,6 +123,8 @@ public class PlanetManager : Singleton<PlanetManager>
     {
         canva.gameObject.SetActive(false);
         cameraComp.SetTarget(null);
+        cameraComp.gameObject.transform.position = new Vector3(0.0f, 20.0f, 0.0f);
+        cameraComp.gameObject.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
     }
 }
 
