@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 373735760533444536}
   - component: {fileID: 2780094602005872636}
   - component: {fileID: 7019766370798332624}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,13 +140,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6072930449793841198}
   - component: {fileID: 3000049496885535568}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mercury
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6072930449793841198
 Transform:
   m_ObjectHideFlags: 0
@@ -179,4 +179,7 @@ MonoBehaviour:
   moveSpeed: 1
   rotateSpeed: 1
   isClockwise: 1
+  stopSimulation: 0
   rotateOn: {fileID: 0}
+  bodyCamera: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}

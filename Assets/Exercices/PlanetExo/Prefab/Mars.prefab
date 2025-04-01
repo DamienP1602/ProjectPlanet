@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6459480365541901888}
   - component: {fileID: 3843575420809166668}
   - component: {fileID: 1621624459768552857}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,13 +140,13 @@ GameObject:
   m_Component:
   - component: {fileID: 371197471751437556}
   - component: {fileID: 6047157331453059884}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &371197471751437556
 Transform:
   m_ObjectHideFlags: 0
@@ -179,4 +179,7 @@ MonoBehaviour:
   moveSpeed: 0.7
   rotateSpeed: 1
   isClockwise: 1
+  stopSimulation: 0
   rotateOn: {fileID: 0}
+  bodyCamera: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}

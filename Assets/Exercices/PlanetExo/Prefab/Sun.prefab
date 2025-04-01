@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6913895823828695869}
   - component: {fileID: 3687017124995447166}
   - component: {fileID: 9153577008143578652}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ MonoBehaviour:
     <Densite>k__BackingField: 
     <Revolution>k__BackingField: 
     <Rotation>k__BackingField: 
-    <Temperature>k__BackingField: 5 500
+    <Temperature>k__BackingField: 
     <SatellitesCount>k__BackingField: 
   stelarBody: {fileID: 0}
 --- !u!1 &8062313230549136273
@@ -140,13 +140,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7447427087826878376}
   - component: {fileID: 8969295982396723271}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7447427087826878376
 Transform:
   m_ObjectHideFlags: 0
@@ -179,4 +179,7 @@ MonoBehaviour:
   moveSpeed: 0
   rotateSpeed: 1
   isClockwise: 1
+  stopSimulation: 0
   rotateOn: {fileID: 0}
+  bodyCamera: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}

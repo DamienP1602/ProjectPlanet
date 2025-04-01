@@ -50,7 +50,10 @@ MonoBehaviour:
   moveSpeed: 0.8
   rotateSpeed: 1
   isClockwise: 1
+  stopSimulation: 0
   rotateOn: {fileID: 0}
+  bodyCamera: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &386994524389668812
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,4 +308,7 @@ MonoBehaviour:
   moveSpeed: 13
   rotateSpeed: 1
   isClockwise: 1
+  stopSimulation: 0
   rotateOn: {fileID: 1097789264188462251}
+  bodyCamera: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
