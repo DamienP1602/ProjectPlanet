@@ -31,7 +31,7 @@ public class StelarBody : MonoBehaviour
     private void OnDrawGizmos()
     {
         //Gizmos.color = Color.magenta;
-        //Gizmos.DrawSphere(positionOffset + GetNewPosition(), 0.2f);
+        //Gizmos.DrawSphere(positionOffset, 0.2f);
         //    Gizmos.color = Color.red;
         //    Gizmos.DrawRay(positionOffset, transform.position);
     }
@@ -48,6 +48,6 @@ public class StelarBody : MonoBehaviour
 
     public Vector3 GetRotationOffset()
     {
-        return transform.rotation.eulerAngles + rotationOffset;
+        return rotationOffset;
     }
 }

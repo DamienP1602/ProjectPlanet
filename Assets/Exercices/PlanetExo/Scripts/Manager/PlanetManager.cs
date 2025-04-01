@@ -90,6 +90,7 @@ public class PlanetManager : Singleton<PlanetManager>
 
             if (Physics.Raycast(_ray, out _result, 100.0f, planetLayer))
             {
+
                 ShowPlanetInfo(_result.collider.transform);
             }
         }
@@ -98,7 +99,7 @@ public class PlanetManager : Singleton<PlanetManager>
     void ShowPlanetInfo(Transform _planet)
     {
         PlanetComponent _comp = allPlanets[_planet.parent.name];
-
+        
         cameraComp.SetTarget(_comp);
         canva.gameObject.SetActive(true);
         canva.SetToCanva(_comp.data.PlanetName,_comp.data.ToString());
@@ -108,6 +109,8 @@ public class PlanetManager : Singleton<PlanetManager>
     {
         canva.gameObject.SetActive(false);
         cameraComp.SetTarget(null);
+        cameraComp.gameObject.transform.position = new Vector3(0.0f, 20.0f, 0.0f);
+        cameraComp.gameObject.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
     }
 }
 

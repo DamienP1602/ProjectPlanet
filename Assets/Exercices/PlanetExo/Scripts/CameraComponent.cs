@@ -19,6 +19,4 @@ public class CameraComponent : MonoBehaviour
             springArm.eulerAngles = target.StelarBody.GetRotationOffset();
         }
     }
-
-
 }
