@@ -17,8 +17,14 @@ public class PlanetData
 
     public override string ToString()
     {
-        return "Type = " + Type+ "\n" + "PlanetName = " + PlanetName + "\n" + "Diameter = " + Diameter + "\n" + "Densite = " + Densite + "\n" +
-            "Revolution = " + Revolution + "\n" + "Rotation = " + Rotation + "\n" + "Temperature" + Temperature + "\n" + "SatellitesCount = " + SatellitesCount;
+        return "Type = " + VerifValue(Type) + "\n" + "Diameter = " + VerifValue(Diameter) + "\n" + "Densite = " + VerifValue(Densite) + "\n" +
+            "Revolution = " + VerifValue(Revolution) + "\n" + "Rotation = " + VerifValue(Rotation) + "\n" + 
+            "Average Temperature = " + VerifValue(Temperature) + "\n" + "Amount of Satellites = " + VerifValue(SatellitesCount);
+    }
+
+    public string VerifValue(string _str, string _toReplace = "0")
+    {
+        return string.IsNullOrEmpty(_str) ? _toReplace : _str;
     }
 }
 
@@ -26,12 +32,13 @@ public class PlanetComponent : MonoBehaviour
 {
     public PlanetData? data = null;
     [SerializeField] StelarBody stelarBody = null;
+    public StelarBody StelarBody => stelarBody;
 
     // Start is called before the first frame update
     void Start()
     {
-        PlanetManager.Instance.Add(name,this);
-        stelarBody = GetComponent<StelarBody>();
+        PlanetManager.Instance.Add(transform.parent.name,this);
+        stelarBody = transform.parent.GetComponent<StelarBody>();
     }
 
     // Update is called once per frame

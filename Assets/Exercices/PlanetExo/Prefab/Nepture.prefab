@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7840708235112114968}
   - component: {fileID: 5467477835553995940}
   - component: {fileID: 6997799341637377207}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,13 +140,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6854871595665705923}
   - component: {fileID: 8916703681185291917}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Nepture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6854871595665705923
 Transform:
   m_ObjectHideFlags: 0

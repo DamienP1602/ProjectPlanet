@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6277327195267868101}
   - component: {fileID: 80333199849878366}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6277327195267868101
 Transform:
   m_ObjectHideFlags: 0
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 8188776776249206276}
   - component: {fileID: 4076322841639673810}
   - component: {fileID: 7598033328724648253}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
