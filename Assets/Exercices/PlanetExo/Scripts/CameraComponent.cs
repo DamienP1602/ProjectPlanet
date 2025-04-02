@@ -16,13 +16,14 @@ public class CameraComponent : MonoBehaviour
         transform.position = new Vector3(0.0f, 20.0f, 0.0f);
         transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
     }
+
     private void Update()
     {
         if (target)
         {
             if (target.StelarBody.IsStopSimulation()) return;
-            springArm.position = target.StelarBody.GetPositionOffset();
-            springArm.eulerAngles = target.StelarBody.GetRotationOffset();
+            springArm.position = Vector3.Lerp(springArm.position, target.StelarBody.GetPositionOffset(), Time.deltaTime * 20.0f);
+            springArm.eulerAngles = Vector3.Lerp(springArm.eulerAngles, target.StelarBody.GetRotationOffset(), Time.deltaTime * 20.0f);
         }
     }
 }
