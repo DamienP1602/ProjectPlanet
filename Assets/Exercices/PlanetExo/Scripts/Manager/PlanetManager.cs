@@ -16,7 +16,7 @@ public class PlanetManager : Singleton<PlanetManager>
 
     public List<PlanetComponent> AllPlanets => allPlanets;
 
-    private void OnEnable()
+    private void OnEnable()//
     {
         EnhancedTouchSupport.Enable();
     }
