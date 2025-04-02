@@ -215,8 +215,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    <Type>k__BackingField: "\xC9toile"
-    <PlanetName>k__BackingField: Soleil
+    <Type>k__BackingField: Star
+    <PlanetName>k__BackingField: Sun
     <Diameter>k__BackingField: 1392684 KM
     <Densite>k__BackingField: "1,988 \xD7 10^30 kg"
     <Revolution>k__BackingField: 0

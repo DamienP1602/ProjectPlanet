@@ -122,11 +122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    <Type>k__BackingField: "G\xE9ante de Glace"
+    <Type>k__BackingField: Ice giant
     <PlanetName>k__BackingField: Neptune
     <Diameter>k__BackingField: 49528 KM
     <Densite>k__BackingField: "1,024 \xD7 10^26 kg"
-    <Revolution>k__BackingField: 59.8 jours
+    <Revolution>k__BackingField: 59.8 days
     <Rotation>k__BackingField: 16.1 h
     <Temperature>k__BackingField: "-200 C\xB0"
     <SatellitesCount>k__BackingField: 14
