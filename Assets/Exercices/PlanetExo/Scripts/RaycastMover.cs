@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.MagicLeap;
 
@@ -16,6 +17,16 @@ public class RaycastMover : MonoBehaviour
     private bool needToMove = false;
 
     private bool IsValid => planeManager && raycastManager && solarSystemTransform;
+
+    //private void OnEnable()
+    //{
+    //    EnhancedTouchSupport.Enable();
+    //}
+
+    //private void OnDisable()
+    //{
+    //    EnhancedTouchSupport.Disable();
+    //}
 
     void Update()
     {
@@ -33,9 +44,13 @@ public class RaycastMover : MonoBehaviour
 
     private bool TryGetTouchPosition(out Vector2 _touchPosition)
     {
-        if(InputTouch.activeTouches.Count > 0 && InputTouch.activeTouches[0].began)
+        print("DEBUG => TryGetPosition");
+
+        if (InputTouch.activeTouches.Count > 0 && InputTouch.activeTouches[0].began)
         {
             _touchPosition = InputTouch.activeTouches[0].screenPosition;
+            print($"DEBUG => {_touchPosition}");
+
             return true;
         }
 
@@ -49,8 +64,11 @@ public class RaycastMover : MonoBehaviour
         if(raycastManager.Raycast(_touchPosition, _outResults, UnityEngine.XR.ARSubsystems.TrackableType.Planes))
         {
             Pose _pose = _outResults[0].pose;
-            Vector3 _current = Vector3.MoveTowards(solarSystemTransform.position, _pose.position, Time.deltaTime);
-            if (Vector3.Distance(_current, _pose.position) < 1.0f)
+            //Vector3 _current = Vector3.MoveTowards(solarSystemTransform.position, _pose.position, Time.deltaTime);
+            solarSystemTransform.position = _pose.position;
+            print("DEBUG => MOVING");
+
+            if (Vector3.Distance(_pose.position, solarSystemTransform.position) < 1.0f)
                 needToMove = false;
         }
     }
