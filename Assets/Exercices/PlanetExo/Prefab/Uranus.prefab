@@ -122,14 +122,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    <Type>k__BackingField: "Plan\xE8te Gazeuse"
-    <PlanetName>k__BackingField: Jupiter
-    <Diameter>k__BackingField: 142984 KM
-    <Densite>k__BackingField: "8,684 \xD7 10^25 kg"
-    <Revolution>k__BackingField: 4331 jours
-    <Rotation>k__BackingField: 9.9 h
-    <Temperature>k__BackingField: "-110 C\xB0"
-    <SatellitesCount>k__BackingField: 79
+    <Type>k__BackingField: "G\xE9ante de Glace"
+    <PlanetName>k__BackingField: Uranus
+    <Diameter>k__BackingField: 51118 KM
+    <Densite>k__BackingField: "8,681 \xD7 10^25 kg"
+    <Revolution>k__BackingField: 30.589 jours
+    <Rotation>k__BackingField: 17.2 h
+    <Temperature>k__BackingField: "-195 C\xB0"
+    <SatellitesCount>k__BackingField: 27
   stelarBody: {fileID: 0}
 --- !u!114 &4993668182925545123
 MonoBehaviour:
