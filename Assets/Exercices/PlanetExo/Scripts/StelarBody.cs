@@ -12,7 +12,7 @@ public class StelarBody : MonoBehaviour
     [SerializeField] bool stopSimulation = false;
     [SerializeField] Transform rotateOn;
     [SerializeField] Vector3 positionOffset = Vector3.zero;
-    [SerializeField] Vector3 rotationOffset = Vector3.zero;
+    [SerializeField] Vector3 rotationOffset = new Vector3(0.0f, 180.0f, 0.0f);
     Vector3 startPosition = Vector3.zero;
 
     private void Awake()
@@ -40,8 +40,8 @@ public class StelarBody : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        //Gizmos.color = Color.magenta;
-        //Gizmos.DrawSphere(positionOffset, 0.2f);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawSphere(positionOffset, 0.2f);
         //    Gizmos.color = Color.red;
         //    Gizmos.DrawRay(positionOffset, transform.position);
     }
