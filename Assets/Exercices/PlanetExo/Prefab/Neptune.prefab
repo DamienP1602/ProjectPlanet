@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    <Type>k__BackingField: "Plan\xE8te gazeuse"
+    <Type>k__BackingField: "G\xE9ante de Glace"
     <PlanetName>k__BackingField: Neptune
     <Diameter>k__BackingField: 49528 KM
     <Densite>k__BackingField: "1,024 \xD7 10^26 kg"
