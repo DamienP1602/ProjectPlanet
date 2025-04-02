@@ -12,7 +12,7 @@ public class StelarBody : MonoBehaviour
     [SerializeField] bool stopSimulation = false;
     [SerializeField] Transform rotateOn;
     [SerializeField] Vector3 positionOffset = Vector3.zero;
-    [SerializeField] Vector3 rotationOffset = Vector3.zero;
+    [SerializeField] Vector3 rotationOffset = new Vector3(90.0f, 0.0f, 0.0f);
     Vector3 startPosition = Vector3.zero;
 
     private void Awake()
