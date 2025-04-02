@@ -133,6 +133,9 @@ public class PlanetManager : Singleton<PlanetManager>
     {
         foreach (PlanetComponent _planet in allPlanets)
         {
+            if (_planet.StelarBody.StopSimulation)
+                continue;
+
             _planet.StelarBody.SetCanMove(!_planet.StelarBody.CanMove);
         }
     }
@@ -141,6 +144,9 @@ public class PlanetManager : Singleton<PlanetManager>
     {
         foreach (PlanetComponent _planet in allPlanets)
         {
+            if (!_planet.StelarBody.CanMove)
+                continue;
+
             _planet.StelarBody.SetSimulation(!_planet.StelarBody.StopSimulation);
         }
     }

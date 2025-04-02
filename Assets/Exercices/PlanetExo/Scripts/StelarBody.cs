@@ -60,7 +60,7 @@ public class StelarBody : MonoBehaviour
 
     public Vector3 GetPositionOffset()
     {
-        return GetNewPosition() + positionOffset;
+        return transform.position + positionOffset;
     }
 
     public Vector3 GetRotationOffset()
