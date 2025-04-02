@@ -1988,12 +1988,12 @@ PrefabInstance:
     - target: {fileID: 130325850162747451, guid: 0a083130019f8504cb6a82c131a2bb99,
         type: 3}
       propertyPath: rotationOffset.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 130325850162747451, guid: 0a083130019f8504cb6a82c131a2bb99,
         type: 3}
       propertyPath: rotationOffset.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 364164299518957304, guid: 0a083130019f8504cb6a82c131a2bb99,
         type: 3}
@@ -2167,8 +2167,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6239650747723881161, guid: 0a083130019f8504cb6a82c131a2bb99,
         type: 3}
+      propertyPath: rotationOffset.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239650747723881161, guid: 0a083130019f8504cb6a82c131a2bb99,
+        type: 3}
       propertyPath: rotationOffset.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6484025660743071191, guid: 0a083130019f8504cb6a82c131a2bb99,
         type: 3}
@@ -2282,6 +2287,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7897202663525708091, guid: 0a083130019f8504cb6a82c131a2bb99,
         type: 3}
+      propertyPath: range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7897202663525708091, guid: 0a083130019f8504cb6a82c131a2bb99,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7897202663525708091, guid: 0a083130019f8504cb6a82c131a2bb99,
+        type: 3}
+      propertyPath: isClockwise
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7897202663525708091, guid: 0a083130019f8504cb6a82c131a2bb99,
+        type: 3}
       propertyPath: positionOffset.y
       value: 1.25
       objectReference: {fileID: 0}
@@ -2317,8 +2337,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8588881309993678783, guid: 0a083130019f8504cb6a82c131a2bb99,
         type: 3}
+      propertyPath: rotationOffset.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588881309993678783, guid: 0a083130019f8504cb6a82c131a2bb99,
+        type: 3}
       propertyPath: rotationOffset.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
