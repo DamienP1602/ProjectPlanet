@@ -13,7 +13,7 @@ public class CameraComponent : MonoBehaviour
 
     private void Awake()
     {
-        transform.position = new Vector3(0.0f, 20.0f, 0.0f);
+        transform.position = new Vector3(0.0f, 15.0f, 0.0f);
         transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
     }
 

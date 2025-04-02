@@ -107,9 +107,8 @@ void Update()
     {
         canva.gameObject.SetActive(false);
         cameraComp.SetTarget(null);
-
-        cameraComp.transform.position = new Vector3(0.0f, 20.0f, 0.0f);
-        cameraComp.transform.eulerAngles = new Vector3(90.0f,0.0f,0.0f);
+        cameraComp.transform.position = new Vector3(0.0f, 15.0f, 0.0f);
+        cameraComp.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
     }
 }
 
