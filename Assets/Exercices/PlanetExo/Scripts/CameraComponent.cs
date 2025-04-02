@@ -21,7 +21,7 @@ public class CameraComponent : MonoBehaviour
     {
         if (target)
         {
-            if (target.StelarBody.IsStopSimulation()) return;
+            if (target.StelarBody.StopSimulation) return;
             springArm.position = Vector3.Lerp(springArm.position, target.StelarBody.GetPositionOffset(), Time.deltaTime * 20.0f);
             springArm.eulerAngles = Vector3.Lerp(springArm.eulerAngles, target.StelarBody.GetRotationOffset(), Time.deltaTime * 20.0f);
         }

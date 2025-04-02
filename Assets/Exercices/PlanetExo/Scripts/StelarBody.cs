@@ -10,10 +10,17 @@ public class StelarBody : MonoBehaviour
     [SerializeField] float rotateSpeed = 1.0f;
     [SerializeField] bool isClockwise = true;
     [SerializeField] bool stopSimulation = false;
+    [SerializeField] bool canMove = true;
     [SerializeField] Transform rotateOn;
     [SerializeField] Vector3 positionOffset = Vector3.zero;
     [SerializeField] Vector3 rotationOffset = new Vector3(90.0f, 0.0f, 0.0f);
     Vector3 startPosition = Vector3.zero;
+
+    public bool StopSimulation => stopSimulation;
+    public bool CanMove => canMove;
+
+    public void SetSimulation(bool _value) => stopSimulation = _value;
+    public void SetCanMove(bool _value) => canMove = _value;
 
     private void Awake()
     {
@@ -21,6 +28,8 @@ public class StelarBody : MonoBehaviour
     }
     void Update()
     {
+        if (!canMove) return;
+
         if (stopSimulation)
         {
             transform.position = startPosition;
@@ -57,10 +66,5 @@ public class StelarBody : MonoBehaviour
     public Vector3 GetRotationOffset()
     {
         return rotationOffset;
-    }
-
-    public bool IsStopSimulation()
-    {
-        return stopSimulation;
     }
 }

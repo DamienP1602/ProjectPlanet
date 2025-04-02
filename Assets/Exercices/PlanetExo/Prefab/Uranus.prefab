@@ -122,11 +122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    <Type>k__BackingField: "G\xE9ante de Glace"
+    <Type>k__BackingField: Ice giant
     <PlanetName>k__BackingField: Uranus
     <Diameter>k__BackingField: 51118 KM
     <Densite>k__BackingField: "8,681 \xD7 10^25 kg"
-    <Revolution>k__BackingField: 30.589 jours
+    <Revolution>k__BackingField: 30.589 days
     <Rotation>k__BackingField: 17.2 h
     <Temperature>k__BackingField: "-195 C\xB0"
     <SatellitesCount>k__BackingField: 27

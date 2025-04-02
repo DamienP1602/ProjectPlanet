@@ -30,7 +30,7 @@ public class PlanetManager : Singleton<PlanetManager>
     // Start is called before the first frame updateS
     void Start()
     {
-        canva.quitButton.onClick.AddListener(ResetTarget);
+        InitCanva();
         SearchPlanets();
     }
 
@@ -38,6 +38,15 @@ public class PlanetManager : Singleton<PlanetManager>
     void Update()
     {
         Interact();
+    }
+
+    public void InitCanva()
+    {
+        canva.QuitButton.onClick.AddListener(ResetTarget);
+
+        canva.StopMotionButton.onClick.AddListener(ToggleMovement);
+
+        canva.SortButton.onClick.AddListener(SortPlanet);
     }
 
     void SearchPlanets()
@@ -106,7 +115,7 @@ public class PlanetManager : Singleton<PlanetManager>
     public void ShowPlanetInfo(PlanetComponent _planet)
     {
         cameraComp.SetTarget(_planet);
-        canva.gameObject.SetActive(true);
+        canva.ChangeCurrentPanel(PanelEnum.INFO_PANEL);
         canva.SetToCanva(_planet.data.PlanetName, _planet.data.ToString());
     }
 
@@ -114,9 +123,26 @@ public class PlanetManager : Singleton<PlanetManager>
     {
         canva.gameObject.SetActive(false);
         cameraComp.SetTarget(null);
+        canva.ChangeCurrentPanel(PanelEnum.MAIN_PANEL);
 
         cameraComp.transform.position = new Vector3(0.0f, 15.0f, 0.0f) + GetPlanetByName("Sun").transform.position;
         cameraComp.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
+    }
+
+    void ToggleMovement()
+    {
+        foreach (PlanetComponent _planet in allPlanets)
+        {
+            _planet.StelarBody.SetCanMove(!_planet.StelarBody.CanMove);
+        }
+    }
+
+    void SortPlanet()
+    {
+        foreach (PlanetComponent _planet in allPlanets)
+        {
+            _planet.StelarBody.SetSimulation(!_planet.StelarBody.StopSimulation);
+        }
     }
 }
 
