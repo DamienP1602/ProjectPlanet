@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 
@@ -44,6 +45,15 @@ public class PlanetManager : Singleton<PlanetManager>
         allPlanets = solarSystem.GetComponentsInChildren<PlanetComponent>(true).ToList();
     }
 
+    public PlanetComponent GetPlanetByName(string _name)
+    {
+        foreach (PlanetComponent _planet in AllPlanets)
+        {
+            if (_planet.data.PlanetName == _name)
+                return _planet;
+        }
+        return null;
+    }
     //public void SetData(string _name, PlanetComponent _planet)
     //{
     //    foreach (PlanetData _planetData in data.results)
@@ -105,7 +115,7 @@ public class PlanetManager : Singleton<PlanetManager>
         canva.gameObject.SetActive(false);
         cameraComp.SetTarget(null);
 
-        cameraComp.transform.position = new Vector3(0.0f, 15.0f, 0.0f);
+        cameraComp.transform.position = new Vector3(0.0f, 15.0f, 0.0f) + GetPlanetByName("Sun").transform.position;
         cameraComp.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
     }
 }
