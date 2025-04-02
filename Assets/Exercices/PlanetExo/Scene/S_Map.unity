@@ -539,6 +539,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893721365}
   m_CullTransparentMesh: 1
+--- !u!1001 &945439706
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4557274822318373112, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: m_Name
+      value: PlaceSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919273277993916131, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.492436
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919273277993916131, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.267403
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919273277993916131, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.218335
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919273277993916131, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919273277993916131, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919273277993916131, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919273277993916131, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919273277993916131, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919273277993916131, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919273277993916131, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167803455952935715, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: planeManager
+      value: 
+      objectReference: {fileID: 1606787751}
+    - target: {fileID: 6167803455952935715, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: raycastManager
+      value: 
+      objectReference: {fileID: 1606787750}
+    - target: {fileID: 6167803455952935715, guid: f1970ee9692b6e44e802c5746379e473,
+        type: 3}
+      propertyPath: solarSystemTransform
+      value: 
+      objectReference: {fileID: 1305054280}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1970ee9692b6e44e802c5746379e473, type: 3}
 --- !u!1 &979814186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,6 +2066,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1305054278}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1305054280 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7534912571363030265, guid: 0a083130019f8504cb6a82c131a2bb99,
+    type: 3}
+  m_PrefabInstance: {fileID: 1305054278}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1375914975
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,6 +2131,8 @@ GameObject:
   - component: {fileID: 1606787747}
   - component: {fileID: 1606787746}
   - component: {fileID: 1606787749}
+  - component: {fileID: 1606787751}
+  - component: {fileID: 1606787750}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -2127,6 +2218,35 @@ MonoBehaviour:
   planetNameText: {fileID: 1141486443}
   planetInfoText: {fileID: 1041965293}
   solarSystem: {fileID: 1305054279}
+--- !u!114 &1606787750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606787744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RaycastPrefab: {fileID: 875286534016366280, guid: d23e4bdbd9eda34459c6527856bb4b1b,
+    type: 3}
+--- !u!114 &1606787751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606787744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlanePrefab: {fileID: 2287399513796585828, guid: d71d348b106364848bfebe86168ebf6d,
+    type: 3}
+  m_DetectionMode: -1
 --- !u!1 &1775455671
 GameObject:
   m_ObjectHideFlags: 0
@@ -3025,3 +3145,4 @@ SceneRoots:
   - {fileID: 1305054278}
   - {fileID: 1272383478}
   - {fileID: 1779701951}
+  - {fileID: 945439706}

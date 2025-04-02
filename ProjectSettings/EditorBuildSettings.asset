@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Exercices/PlanetExo/Scene/S_Map.unity
     guid: 8ca58668231ac8141b88e48c4245f513
-  - enabled: 1
+  - enabled: 0
     path: Assets/Exercices/PlanetExo/Scene/S_Map_PlaceSystem.unity
     guid: e76aa9495545d45438d9de2529cc92fd
   m_configObjects:
