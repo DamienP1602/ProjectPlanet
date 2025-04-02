@@ -21,8 +21,6 @@ public class StelarBody : MonoBehaviour
     }
     void Update()
     {
-        //Camera.main.transform.parent.position = positionOffset;
-        //Camera.main.transform.parent.eulerAngles = rotationOffset;
         if (stopSimulation)
         {
             transform.position = startPosition;

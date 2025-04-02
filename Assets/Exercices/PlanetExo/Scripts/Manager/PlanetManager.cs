@@ -1,11 +1,8 @@
-using Newtonsoft.Json;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
-using UnityEngine.Networking;
+
 using InputTouch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class PlanetManager : Singleton<PlanetManager>
@@ -29,15 +26,15 @@ public class PlanetManager : Singleton<PlanetManager>
         EnhancedTouchSupport.Disable();
     }
 
-    // Start is called before the first frame update
+    // Start is called before the first frame updateS
     void Start()
     {
         canva.quitButton.onClick.AddListener(ResetTarget);
         SearchPlanets();
     }
 
-// Update is called once per frame
-void Update()
+    // Update is called once per frame
+    void Update()
     {
         Interact();
     }
@@ -86,7 +83,7 @@ void Update()
         {
             Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit _result;
-            Debug.DrawRay(_ray.origin,_ray.direction * 100.0f);
+            Debug.DrawRay(_ray.origin, _ray.direction * 100.0f);
 
             if (Physics.Raycast(_ray, out _result, 100.0f, planetLayer))
             {
@@ -108,8 +105,8 @@ void Update()
         canva.gameObject.SetActive(false);
         cameraComp.SetTarget(null);
 
-        cameraComp.transform.position = new Vector3(0.0f, 20.0f, 0.0f);
-        cameraComp.transform.eulerAngles = new Vector3(90.0f,0.0f,0.0f);
+        cameraComp.transform.position = new Vector3(0.0f, 15.0f, 0.0f);
+        cameraComp.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
     }
 }
 

@@ -124,11 +124,11 @@ MonoBehaviour:
   data:
     <Type>k__BackingField: "Plan\xE8te Gazeuse"
     <PlanetName>k__BackingField: Jupiter
-    <Diameter>k__BackingField: 142984
-    <Densite>k__BackingField: 1326
-    <Revolution>k__BackingField: 4331
-    <Rotation>k__BackingField: 9.9
-    <Temperature>k__BackingField: -110
+    <Diameter>k__BackingField: 142984 KM
+    <Densite>k__BackingField: "8,684 \xD7 10^25 kg"
+    <Revolution>k__BackingField: 4331 jours
+    <Rotation>k__BackingField: 9.9 h
+    <Temperature>k__BackingField: "-110 C\xB0"
     <SatellitesCount>k__BackingField: 79
   stelarBody: {fileID: 0}
 --- !u!114 &2592594548097526901

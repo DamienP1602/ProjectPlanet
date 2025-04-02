@@ -157,11 +157,11 @@ MonoBehaviour:
   data:
     <Type>k__BackingField: "Plan\xE8te tellurique"
     <PlanetName>k__BackingField: Terre
-    <Diameter>k__BackingField: 12756
-    <Densite>k__BackingField: 5514
-    <Revolution>k__BackingField: 365.2
-    <Rotation>k__BackingField: 23.9
-    <Temperature>k__BackingField: 15
+    <Diameter>k__BackingField: 12756 KM
+    <Densite>k__BackingField: "5,972 \xD7 10^24 kg"
+    <Revolution>k__BackingField: 365.2 jours
+    <Rotation>k__BackingField: 23.9 h
+    <Temperature>k__BackingField: "15 C\xB0"
     <SatellitesCount>k__BackingField: 1
   stelarBody: {fileID: 0}
 --- !u!114 &8365121747397039362

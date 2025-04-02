@@ -156,11 +156,11 @@ MonoBehaviour:
   data:
     <Type>k__BackingField: "Plan\xE8te tellurique"
     <PlanetName>k__BackingField: Venus
-    <Diameter>k__BackingField: 12104
-    <Densite>k__BackingField: 5243
-    <Revolution>k__BackingField: 224.7
-    <Rotation>k__BackingField: -5832.5 (234 jours/days)
-    <Temperature>k__BackingField: 464
+    <Diameter>k__BackingField: 12104 KM
+    <Densite>k__BackingField: "4,870 \xD7 10^24 kg"
+    <Revolution>k__BackingField: 224.7 jours
+    <Rotation>k__BackingField: 5832.5 h
+    <Temperature>k__BackingField: "464 C\xB0"
     <SatellitesCount>k__BackingField: 0
   stelarBody: {fileID: 0}
 --- !u!114 &3978929505001647241
