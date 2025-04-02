@@ -31,16 +31,19 @@ public class TrackedImageSpawner : MonoBehaviour
 
     void DisplayInfoText(string _name)
     {
-        //List<GameObject> _allPlanets = solarSystem.GetComponentsInChildren<GameObject>().ToList<GameObject>();
-        Dictionary<string, PlanetComponent> _allPlanets = PlanetManager.Instance.AllPlanets;        
+        List<PlanetComponent> _allPlanets = PlanetManager.Instance.AllPlanets;
 
-        planetNameText.text = _allPlanets.Count.ToString();
-
-        foreach(KeyValuePair<string, PlanetComponent> _planet in _allPlanets)
+        foreach (PlanetComponent _planet in _allPlanets)
         {
-            if(_planet.Key == _name)          
-                _planet.Value.transform.parent.gameObject.SetActive(true);
+            if (_planet.data.PlanetName == _name)
+                _planet.transform.parent.gameObject.SetActive(true);
         }
+
+        //foreach(KeyValuePair<string, PlanetComponent> _planet in _allPlanets)
+        //{
+        //    if(_planet.Key == _name)          
+        //        _planet.Value.transform.parent.gameObject.SetActive(true);
+        //}
 
         
         //if (_prefab = allPlanets.Find(x => x.name == _name))

@@ -34,13 +34,13 @@ public class PlanetComponent : MonoBehaviour
     [SerializeField] StelarBody stelarBody = null;
     public StelarBody StelarBody => stelarBody;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        PlanetManager.Instance.Add(transform.parent.name,this);
         stelarBody = GetComponent<StelarBody>();
 
-        transform.parent.gameObject.SetActive(false);
+        //PlanetManager.Instance.Add(transform.parent.name,this);
+        //transform.parent.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
@@ -10,14 +11,13 @@ using InputTouch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 public class PlanetManager : Singleton<PlanetManager>
 {
     AllData data = new AllData();
-    Dictionary<string,PlanetComponent> allPlanets = new();
+    [SerializeField] List<PlanetComponent> allPlanets = new();
     [SerializeField] LayerMask planetLayer = 0;
     [SerializeField] PlanetCanva canva = null;
     [SerializeField] CameraComponent cameraComp = null;
+    [SerializeField] GameObject solarSystem = null;
 
-    [SerializeField] GameObject sunTemp = null;
-
-    public Dictionary<string, PlanetComponent> AllPlanets => allPlanets;
+    public List<PlanetComponent> AllPlanets => allPlanets;
 
     private void OnEnable()
     {
@@ -32,17 +32,8 @@ public class PlanetManager : Singleton<PlanetManager>
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(WebFetcher.Request(SetData));
-        //StartCoroutine(WebFetcher.Request(SetDebug));
-
         canva.quitButton.onClick.AddListener(ResetTarget);
-
-        Invoke(nameof(SPAWNSUN), 1.0f);
-    }
-
-    void SPAWNSUN()
-    {
-        Instantiate(sunTemp);
+        SearchPlanets();
     }
 
 // Update is called once per frame
@@ -51,29 +42,26 @@ void Update()
         Interact();
     }
 
-    public void Add(string _name,PlanetComponent _planet)
+    void SearchPlanets()
     {
-        _name = _name.Replace("(Clone)","");
-        allPlanets[_name] = _planet;
-        //SetData(_name,_planet);
-        ShowPlanetInfo(_planet);
+        allPlanets = solarSystem.GetComponentsInChildren<PlanetComponent>(true).ToList();
     }
 
-    public void SetData(string _name, PlanetComponent _planet)
-    {
-        foreach (PlanetData _planetData in data.results)
-        {
-            if (_planetData.PlanetName.Contains(_name))
-            {
-                string _temperatureTemp = _planet.data.Temperature;
-                _planet.data = _planetData;
+    //public void SetData(string _name, PlanetComponent _planet)
+    //{
+    //    foreach (PlanetData _planetData in data.results)
+    //    {
+    //        if (_planetData.PlanetName.Contains(_name))
+    //        {
+    //            string _temperatureTemp = _planet.data.Temperature;
+    //            _planet.data = _planetData;
 
-                _planet.data.Temperature = _planetData.VerifValue(_planetData.Temperature, _temperatureTemp);
-                continue;
-            }
-        }
-        Debug.Log(_planet.data.ToString());
-    }
+    //            _planet.data.Temperature = _planetData.VerifValue(_planetData.Temperature, _temperatureTemp);
+    //            continue;
+    //        }
+    //    }
+    //    Debug.Log(_planet.data.ToString());
+    //}
 
     void Interact()
     {
@@ -119,6 +107,9 @@ void Update()
     {
         canva.gameObject.SetActive(false);
         cameraComp.SetTarget(null);
+
+        cameraComp.transform.position = new Vector3(0.0f, 20.0f, 0.0f);
+        cameraComp.transform.eulerAngles = new Vector3(90.0f,0.0f,0.0f);
     }
 }
 
