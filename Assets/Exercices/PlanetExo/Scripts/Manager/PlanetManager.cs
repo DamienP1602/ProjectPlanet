@@ -14,7 +14,8 @@ public class PlanetManager : Singleton<PlanetManager>
     [SerializeField] PlanetCanva canva = null;
     [SerializeField] CameraComponent cameraComp = null;
     [SerializeField] GameObject solarSystem = null;
-
+    [SerializeField] AudioSource SFX = null;
+    [SerializeField] AudioClip buttonSound = null;
     public List<PlanetComponent> AllPlanets => allPlanets;
 
     private void OnEnable()//
@@ -121,6 +122,7 @@ public class PlanetManager : Singleton<PlanetManager>
 
     void ResetTarget()
     {
+        SFX.Play();
         canva.gameObject.SetActive(false);
         cameraComp.SetTarget(null);
         canva.ChangeCurrentPanel(PanelEnum.MAIN_PANEL);
@@ -131,6 +133,8 @@ public class PlanetManager : Singleton<PlanetManager>
 
     void ToggleMovement()
     {
+        SFX.Play();
+
         foreach (PlanetComponent _planet in allPlanets)
         {
             _planet.StelarBody.SetCanMove(!_planet.StelarBody.CanMove);
@@ -139,6 +143,7 @@ public class PlanetManager : Singleton<PlanetManager>
 
     void SortPlanet()
     {
+        SFX.Play();
         foreach (PlanetComponent _planet in allPlanets)
         {
             _planet.StelarBody.SetSimulation(!_planet.StelarBody.StopSimulation);
