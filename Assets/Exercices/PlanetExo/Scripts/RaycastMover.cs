@@ -66,7 +66,9 @@ public class RaycastMover : MonoBehaviour
             Pose _pose = _outResults[0].pose;
             //Vector3 _current = Vector3.MoveTowards(solarSystemTransform.position, _pose.position, Time.deltaTime);
             solarSystemTransform.position = _pose.position;
-            print("DEBUG => MOVING");
+            print($"DEBUG => POSE {_pose.position}");
+            //_pose.position.z += 5.0f;
+            //print($"DEBUG => NEW POSE {_pose.position}");
 
             if (Vector3.Distance(_pose.position, solarSystemTransform.position) < 1.0f)
                 needToMove = false;
