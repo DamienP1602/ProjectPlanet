@@ -11,6 +11,8 @@ public class CameraComponent : MonoBehaviour
 
     public void SetTarget(PlanetComponent _target) => target = _target;
 
+    public bool IsNear => Vector3.Distance(target.StelarBody.GetPositionOffset(), transform.position) < 0.01f;
+
     private void Awake()
     {
         transform.position = new Vector3(0.0f, 15.0f, 0.0f);
@@ -19,11 +21,20 @@ public class CameraComponent : MonoBehaviour
 
     private void Update()
     {
+        print("DEBUG => CAMERA COMPONENT  = " + transform.position);
+
         if (target)
         {
-            if (target.StelarBody.StopSimulation) return;
-            springArm.position = Vector3.Lerp(springArm.position, target.StelarBody.GetPositionOffset(), Time.deltaTime * 20.0f);
-            springArm.eulerAngles = Vector3.Lerp(springArm.eulerAngles, target.StelarBody.GetRotationOffset(), Time.deltaTime * 20.0f);
+            if (!IsNear)
+            {
+                Vector3 _direction = target.transform.position - transform.position;
+                _direction.Normalize();
+                Quaternion _lookAt = Quaternion.LookRotation(_direction);
+
+                springArm.position = Vector3.Lerp(springArm.position, target.StelarBody.GetPositionOffset(), Time.deltaTime * 5.0f);
+                springArm.rotation = Quaternion.Lerp(springArm.rotation, _lookAt, Time.deltaTime * 5.0f);
+
+            }
         }
     }
 }
